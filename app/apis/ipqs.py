@@ -1,7 +1,11 @@
 import requests
 import logging
+import os
+from dotenv import load_dotenv
 
-API_KEY = "Q1fWHwcjIQSMo0egiFvaZekFYqygJs46"  # personal account
+load_dotenv()
+
+API_KEY = os.environ.get("IPQ_API_KEY")
 IPQA_BASE_URL = "https://www.ipqualityscore.com/api/"
 
 logger = logging.getLogger("validatelogger")

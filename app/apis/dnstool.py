@@ -1,7 +1,11 @@
 import requests
 import logging
+import os
+from dotenv import load_dotenv
 
-API_KEY = "xBDl2N/J4V2fUEtzuBw32Q==9zBsF1pfoJzius9m"  # personal account
+load_dotenv()
+
+API_KEY = os.environ.get("DNS_API_KEY")
 BASE_URL = "https://api.api-ninjas.com/v1/"
 # https://api.api-ninjas.com/v1/routingnumber?routing_number=111000012
 

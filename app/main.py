@@ -32,10 +32,3 @@ app.include_router(ip_tools.router)
 async def root():
     logger.info("Root endpoint called")
     return {"message": "You found me"}
-
-if __name__ == "__main__":
-    import uvicorn
-    host = os.getenv("HOST", "localhost")
-    port = int(os.getenv("PORT", 5008))
-    logger.info(f"Starting server at {host}:{port}")
-    uvicorn.run("main:app", host=host, port=port, reload=True)
